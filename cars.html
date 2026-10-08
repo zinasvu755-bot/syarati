@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/style.css" />
+  <title>My Car </title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="lo">
+        <h2> سيارتي </h2>
+        <div>
+          <img src="pictures/logo.png" alt="">
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">  من نحن</a></li>
+          <li><a href="cars.html"> السيارات </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="over-layer">
+    <div class="content">
+      <h2>فاتورة التأجير</h2>
+      <table class="buyer">
+        <thead>
+          <tr>
+            <td>الصورة</td>
+            <td>السيارة</td>
+            <td>السعر اليومي</td>
+            <td>عدد الأيام</td>
+            <td>الإجمالي</td>
+          </tr>
+        </thead>
+        <tbody id="carting-table"></tbody>
+      </table>
+      <div class="invoice-summary">
+        <p>مدة التأجير: <strong><span id="rental-days">0</span> يوم</strong></p>
+        <p>الإجمالي قبل الحسم: <strong id="subtotal">0</strong></p>
+        <p><span id="discount-label">الحسم</span>: <strong id="discount-amount">0</strong></p>
+        <p>الإجمالي المستحق: <strong id="finalTotal">0</strong></p>
+      </div>
+      <div class="foot">
+        <button id="good" class="button-5">حسنا</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <td>الرمز</td>
+          <td>الموديل</td>
+          <td>سنة الصنع </td>
+          <td> السعر اليومي </td>
+          <td>اظهار التفاصيل</td>
+          <td>اختيار</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CR-001</td>
+          <td> مرسيدس بنز سي كلاس</td>
+          <td>2023</td>
+          <td> 1200</td>
+          <td><span class="show-specs"></span></td>
+          <td>
+            <span class="rent" data-id="1" data-img="pictures/CR-001.jpg" data-car=" مرسيدس بنز سي كلاس"
+              data-price="1200">
+            </span>
+          </td>
+        </tr>
+        <tr class="meal hide">
+          <td colspan="6">
+            <div class="car-details">
+              <section class="specification-panel" aria-label="مواصفات السيارة">
+                <h3 class="details-title">مواصفات السيارة</h3>
+                <div class="specifications">
+                  <div class="spec-item fuel-type">
+                    <h4>نوع الوقود</h4>
+                    <p>بنزين</p>
+                  </div>
+                  <div class="spec-item transmission">
+                    <h4>ناقل الحركة</h4>
+                    <p>أوتوماتيك 9 سرعات</p>
+                  </div>
+                  <div class="spec-item engine">
+                    <h4>سعة المحرك</h4>
+                    <p>1.5 لتر توربو</p>
+                  </div>
+                  <div class="spec-item seats">
+                    <h4>عدد المقاعد</h4>
+                    <p>5 مقاعد</p>
+                  </div>
+                  <div class="spec-item kilometer">
+                    <h4>عداد الكيلومترات</h4>
+                    <p dir="ltr">19,000 km</p>
+                  </div>
+                  <div class="spec-item car-color">
+                    <h4>اللون</h4>
+                    <p>كحلي</p>
+                  </div>
+                </div>
+              </section>
+              <figure class="car-photo">
+                <img src="pictures/CR-001.jpg" alt="مرسيدس بنز سي كلاس موديل 2023" />
+                <figcaption>مرسيدس بنز سي كلاس - 2023</figcaption>
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>CR-002</td>
+          <td>   فورد رينجر  </td>
+          <td>2020</td>
+          <td> 500</td>
+          <td><span class="show-specs"></span></td>
+          <td>
+            <span class="rent" data-id="2" data-img="pictures/CR-002.jpg" data-car=" فورد رينجر  2020"
+              data-price="500">
+            </span>
+          </td>
+        </tr>
+        <tr class="meal hide">
+          <td colspan="6">
+            <div class="car-details">
+              <section class="specification-panel" aria-label="مواصفات السيارة">
+                <h3 class="details-title">مواصفات السيارة</h3>
+                <div class="specifications">
+                  <div class="spec-item fuel-type">
+                    <h4>نوع الوقود</h4>
+                    <p>ديزل</p>
+                  </div>
+                  <div class="spec-item transmission">
+                    <h4>ناقل الحركة</h4>
+                    <p>أوتوماتيك  </p>
+                  </div>
+                  <div class="spec-item engine">
+                    <h4>سعة المحرك</h4>
+                    <p>2.0 لتر توربو</p>
+                  </div>
+                  <div class="spec-item seats">
+                    <h4>عدد المقاعد</h4>
+                    <p>5 مقاعد</p>
+                  </div>
+                  <div class="spec-item kilometer">
+                    <h4>عداد الكيلومترات</h4>
+                    <p dir="ltr">92,000 km</p>
+                  </div>
+                  <div class="spec-item car-color">
+                    <h4>اللون</h4>
+                    <p>برتقالي </p>
+                  </div>
+                </div>
+              </section>
+              <figure class="car-photo">
+                <img src="pictures/CR-002.jpg" alt="فورد رينجر 2020 " />
+                <figcaption>فورد رينجر 2020 </figcaption>
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>CR-003</td>
+          <td>   هيونداي توسان </td>
+          <td>2023</td>
+          <td> 600</td>
+          <td><span class="show-specs"></span></td>
+          <td>
+            <span class="rent" data-id="3" data-img="pictures/CR-003.jpg" data-car=" هيونداي توسان 2023"
+              data-price="600">
+            </span>
+          </td>
+        </tr>
+        <tr class="meal hide">
+          <td colspan="6">
+            <div class="car-details">
+              <section class="specification-panel" aria-label="مواصفات السيارة">
+                <h3 class="details-title">مواصفات السيارة</h3>
+                <div class="specifications">
+                  <div class="spec-item fuel-type">
+                    <h4>نوع الوقود</h4>
+                    <p>بنزين</p>
+                  </div>
+                  <div class="spec-item transmission">
+                    <h4>ناقل الحركة</h4>
+                    <p>أوتوماتيك  </p>
+                  </div>
+                  <div class="spec-item engine">
+                    <h4>سعة المحرك</h4>
+                    <p>2.0 لتر</p>
+                  </div>
+                  <div class="spec-item seats">
+                    <h4>عدد المقاعد</h4>
+                    <p>5 مقاعد</p>
+                  </div>
+                  <div class="spec-item kilometer">
+                    <h4>عداد الكيلومترات</h4>
+                    <p dir="ltr">28,000 km</p>
+                  </div>
+                  <div class="spec-item car-color">
+                    <h4>اللون</h4>
+                    <p>رمادي  </p>
+                  </div>
+                </div>
+              </section>
+              <figure class="car-photo">
+                <img src="pictures/CR-003.jpg" alt="هيونداي توسان 2023 " />
+                <figcaption>هيونداي توسان 2023   </figcaption>
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>CR-004</td>
+          <td>    كيا سورينتو</td>
+          <td>2025</td>
+          <td> 1500</td>
+          <td><span class="show-specs"></span></td>
+          <td>
+            <span class="rent" data-id="4" data-img="pictures/CR-004.jpg" data-car=" كيا سورينتو 2025"
+              data-price="1500">
+            </span>
+          </td>
+        </tr>
+        <tr class="meal hide">
+          <td colspan="6">
+            <div class="car-details">
+              <section class="specification-panel" aria-label="مواصفات السيارة">
+                <h3 class="details-title">مواصفات السيارة</h3>
+                <div class="specifications">
+                  <div class="spec-item fuel-type">
+                    <h4>نوع الوقود</h4>
+                    <p>بنزين</p>
+                  </div>
+                  <div class="spec-item transmission">
+                    <h4>ناقل الحركة</h4>
+                    <p>أوتوماتيك  </p>
+                  </div>
+                  <div class="spec-item engine">
+                    <h4>سعة المحرك</h4>
+                    <p>2.5 لتر توربو</p>
+                  </div>
+                  <div class="spec-item seats">
+                    <h4>عدد المقاعد</h4>
+                    <p>7 مقاعد</p>
+                  </div>
+                  <div class="spec-item kilometer">
+                    <h4>عداد الكيلومترات</h4>
+                    <p dir="ltr">12,000 km</p>
+                  </div>
+                  <div class="spec-item car-color">
+                    <h4>اللون</h4>
+                    <p>ابيض  </p>
+                  </div>
+                </div>
+              </section>
+              <figure class="car-photo">
+                <img src="pictures/CR-004.jpg" alt="كيا سورينتو 2025 " />
+                <figcaption>كيا سورينتو 2025   </figcaption>
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>CR-005</td>
+          <td>  نيسان باترول</td>
+          <td>2026</td>
+          <td> 2500</td>
+          <td><span class="show-specs"></span></td>
+          <td>
+            <span class="rent" data-id="5" data-img="pictures/CR-005.jpg" data-car=" نيسان باترول 2026"
+              data-price="2500">
+            </span>
+          </td>
+        </tr>
+        <tr class="meal hide">
+          <td colspan="6">
+            <div class="car-details">
+              <section class="specification-panel" aria-label="مواصفات السيارة">
+                <h3 class="details-title">مواصفات السيارة</h3>
+                <div class="specifications">
+                  <div class="spec-item fuel-type">
+                    <h4>نوع الوقود</h4>
+                    <p>بنزين</p>
+                  </div>
+                  <div class="spec-item transmission">
+                    <h4>ناقل الحركة</h4>
+                    <p>أوتوماتيك  </p>
+                  </div>
+                  <div class="spec-item engine">
+                    <h4>سعة المحرك</h4>
+                    <p>5.6 لتر</p>
+                  </div>
+                  <div class="spec-item seats">
+                    <h4>عدد المقاعد</h4>
+                    <p>7 مقاعد</p>
+                  </div>
+                  <div class="spec-item kilometer">
+                    <h4>عداد الكيلومترات</h4>
+                    <p dir="ltr">20,000 km</p>
+                  </div>
+                  <div class="spec-item car-color">
+                    <h4>اللون</h4>
+                    <p>اسود  </p>
+                  </div>
+                </div>
+              </section>
+              <figure class="car-photo">
+                <img src="pictures/CR-005.jpg" alt="نيسان باترول 2026 " />
+                <figcaption>نيسان باترول 2026   </figcaption>
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="btn-d">
+    <div class="container">
+      <a href="#userfullname" id="btn-5" class="button-5" role="button">متابعة</a>
+    </div>
+  </div>
+  <div class="container form">
+    <div id="register" class="myform hidden">
+      <div class="form-heading">
+        <div>
+          <p>إتمام طلب الاستئجار</p>
+          <h2>بيانات مقدم الطلب</h2>
+        </div>
+        <button type="button" id="closing-form" class="icon" aria-label="إغلاق النموذج">
+          <img src="pictures/close.png" alt="" />
+        </button>
+      </div>
+      <form novalidate>
+        <div>
+          <label for="userfullname">اسم مقدم الطلب</label>
+          <input id="userfullname" type="text" name="name" placeholder="ادخل الاسم باللغة العربية" />
+          <img class="error-image" src="pictures/error.png" alt="" />
+        </div>
+        <div>
+          <label for="nationalNumber">الرقم الوطني</label>
+          <input id="nationalNumber" type="text" name="national-number" inputmode="numeric" maxlength="11"
+            dir="ltr" placeholder="11 خانة، تبدأ من 01 إلى 14" required />
+          <img class="error-image" src="pictures/error.png" alt="" />
+        </div>
+        <div>
+          <label for="startdate">تاريخ بداية التأجير</label>
+          <input id="startdate" type="text" name="startdate" maxlength="10" dir="ltr"
+            placeholder="يوم/شهر/سنة" required />
+          <img class="error-image" src="pictures/error.png" alt="" />
+        </div>
+        <div>
+          <label for="enddate">تاريخ نهاية التأجير</label>
+          <input id="enddate" type="text" name="enddate" maxlength="10" dir="ltr"
+            placeholder="يوم/شهر/سنة" required />
+          <img class="error-image" src="pictures/error.png" alt="" />
+        </div>
+        <div>
+          <label for="teleDataumber">رقم الهاتف</label>
+          <input id="teleDataumber" type="tel" name="teleDataumber" inputmode="numeric" maxlength="10"
+            dir="ltr" placeholder="09XXXXXXXX" />
+          <img class="error-image" src="pictures/error.png" alt="" />
+        </div>
+        <div>
+          <label for="user-email">البريد الإلكتروني</label>
+          <input id="user-email" type="email" name="user-email" placeholder=" ادخل الايميل بشكل صحيح " />
+          <img class="error-image" src="pictures/error.png" alt="" />
+        </div>
+        <div class="submiting">
+          <button type="submit" id="submiting-form" class="button-5">
+            تاكيد
+          </button>
+        </div>
+      </form>
+      <div id="form-errors" class="form-errors" role="alert" aria-live="polite" hidden>
+        <p>يرجى مراجعة البيانات التالية:</p>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="myfunctions.js"></script>
+</body>
+
+</html>
